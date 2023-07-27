@@ -5,29 +5,28 @@ class GameView{
     
   }
   showGameOverPage(){
-    this.gameOverPage.show()
-    this.gamePage.hide()
+   
   }
 
   showGamePage(){
-    this.gameOverPage.hide()
-    this.gamePage.restart()
-    this.gamePage.show()
+    
   }
 
   restartGame(){
-    this.gamePage.restart()
+    
   }
   initGameOverPage(callbacks){
     this.gameOverPage = new GameOverPage(callbacks)
+    
     this.gameOverPage.init({
-      scene: this.gamePage.scene
+      scene: this.gamePage.scene.instance
     })
   }
 
   initGamePage(callbacks){
     this.gamePage = new GamePage(callbacks)
     this.gamePage.init()
+    // console.log(',')
   }
 
 }
