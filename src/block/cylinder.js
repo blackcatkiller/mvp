@@ -14,6 +14,7 @@ export default class Cylinder extends BaseBlock{
     this.y = y;
     this.z = z;
     this.instance.position.set(x,y,z)
-    
+    this.instance.receiveShadow = true
+    this.instance.castShadow = true
   }
 }

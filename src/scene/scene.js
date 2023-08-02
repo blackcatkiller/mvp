@@ -12,6 +12,9 @@ class Scene{
       antilias:true, //抗锯齿
       preserveDrawingBuffer: true
     })
+    this.renderer.shadowMap.enabled = true
+    this.renderer.shadowMap.type = THREE.PCFShadowMap
+
     this.addCamera()
     this.addBackground()
 
@@ -25,7 +28,6 @@ class Scene{
     this.background.init()
     this.background.instance.position.z = -84
     this.camera.instance.add(this.background.instance)
-    console.log(this.camera.instance)
 
   }
 

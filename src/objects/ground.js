@@ -10,8 +10,9 @@ class Ground{
       opacity:0.3,
     })
     this.instance = new THREE.Mesh(groundGeometry, material)
-    this.instance.rotation.x = -Math.PI>>1;
+    this.instance.rotation.x = -Math.PI/2;
     this.instance.position.y = -16/3.2;
+    this.instance.receiveShadow = true;
   }
 }
 
